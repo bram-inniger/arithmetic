@@ -84,6 +84,8 @@ public class ArithmeticBenchmark {
 		blackhole.consume(result);
 	}
 
+	// State is introduced like this to avoid the compiler to do something called "constant folding"
+	// The values were chosen ad random
 	@State(Scope.Thread)
 	public static class BenchmarkState {
 		public long a = 6_254_726_184_220_682L;
